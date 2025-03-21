@@ -4,17 +4,19 @@ using SM.Infrastructure.Context;
 
 namespace SM.Infrastructure.Repositories
 {
-    public class EmployeeRepository() : IEmployeeRepository
+    public class EmployeeRepository(StoreDbContext context) : IEmployeeRepository
     {
-        private readonly StoreDbContext Context;
-        public void AddEmployee()
+        private readonly StoreDbContext Context = context;
+        public void AddEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            //fix functionality
+            Context.Employees.Add(employee);
         }
 
         public void DeleteEmployee()
         {
-            throw new NotImplementedException();
+            //fix functionality
+            Context.Employees.Remove(new Models.Employee());
         }
 
         //public IEnumerable<Employee> GetEmployees()
