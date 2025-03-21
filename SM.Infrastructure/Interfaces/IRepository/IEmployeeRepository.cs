@@ -1,6 +1,5 @@
-﻿using SM.Domain.Models;
-
-namespace SM.Domain.Interfaces.IRepository
+﻿
+namespace SM.Infrastructure.Interfaces.IRepository
 {
     public interface IEmployeeRepository
     {

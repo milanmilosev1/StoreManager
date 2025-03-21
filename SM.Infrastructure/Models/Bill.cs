@@ -3,6 +3,7 @@
     public class Bill
     {
         public Guid Id { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
+        public IEnumerable<BillProduct> BillProducts { get; set; } = [];
     }
 }

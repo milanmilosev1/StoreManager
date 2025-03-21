@@ -1,15 +1,14 @@
-﻿using SM.Domain.Interfaces.IRepository;
-using SM.Domain.Models;
-using SM.Infrastructure.Context;
+﻿using SM.Infrastructure.Context;
+using SM.Infrastructure.Interfaces.IRepository;
 
 namespace SM.Infrastructure.Repositories
 {
-    public class EmployeeRepository() : IEmployeeRepository
+    public class EmployeeRepository(StoreDbContext context) : IEmployeeRepository
     {
-        private readonly StoreDbContext Context;
+        private readonly StoreDbContext Context = context;
         public void AddEmployee()
         {
-            throw new NotImplementedException();
+            Context.Employees.Add(new Models.Employee());
         }
 
         public void DeleteEmployee()

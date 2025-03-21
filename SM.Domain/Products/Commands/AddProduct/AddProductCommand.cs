@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MediatR;
+using SM.Domain.DTOs;
 
-namespace SM.Infrastructure.Models
+namespace SM.Domain.Products.Commands.AddProduct
 {
-    public class Product
+    public class AddProductCommand : IRequest<ProductRepresentation>
     {
-        [Key]
-        public Guid Id { get; set; }
         public string SerialNumber { get; set; } = string.Empty;
         public double Price { get; set; }
         public string Name { get; set; } = string.Empty;

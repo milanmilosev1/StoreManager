@@ -1,6 +1,8 @@
-﻿namespace SM.Infrastructure.Repositories
+﻿using SM.Infrastructure.Interfaces.IRepository;
+
+namespace SM.Infrastructure.Repositories
 {
-    public class BillRepository
+    public class BillRepository : IBillRepository
     {
 
     }
